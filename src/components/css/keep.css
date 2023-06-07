@@ -1,0 +1,15 @@
+.inputbox-div {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.keep {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.note-div {
+  margin: 1rem;
+}

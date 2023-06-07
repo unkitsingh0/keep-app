@@ -1,0 +1,9 @@
+.keep-navbar {
+  display: flex;
+  align-items: center;
+  background-color: #9381ff;
+  color: white;
+  height: 7vh;
+  padding-left: 1rem;
+  font-size: 2rem;
+}
