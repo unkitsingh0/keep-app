@@ -21,13 +21,21 @@ function Inputs() {
   };
   let handelFormSubmit = (e) => {
     e.preventDefault();
-    dispatch(addTodo({ title, take_note }));
+    if (title) {
+      dispatch(addTodo({ title, take_note }));
+    }
+
+    setTitle("");
+    setTake_note("");
   };
+
   return (
     <>
       <form
         className="inputs"
-        onClick={handelFormClick}
+        onClick={(e) => {
+          handelFormClick(e);
+        }}
         onSubmit={handelFormSubmit}
       >
         <input
@@ -35,22 +43,28 @@ function Inputs() {
           placeholder={inputPlachoder.title}
           className={`title ${titleStyle}`}
           onChange={(e) => setTitle(e.target.value)}
+          value={title}
         />
-        <input
+        {/* <input
           type="text"
           placeholder={inputPlachoder.note}
           className={`take-note ${inputDisplay} `}
           onChange={(e) => setTake_note(e.target.value)}
-        />
-        {/* <textarea
+          value={take_note}
+        /> */}
+        <textarea
           className={`take-note ${inputDisplay} `}
           cols="30"
-          rows="10"
+          rows="115"
           onChange={(e) => setTake_note(e.target.value)}
-        ></textarea> */}
-        <button type="submit" className={`submit-btn ${inputDisplay}`}>
-          +
-        </button>
+          placeholder={inputPlachoder.note}
+          value={take_note}
+        ></textarea>
+        <div className="submit-btn-div">
+          <button type="submit" className={`submit-btn ${inputDisplay}`}>
+            +
+          </button>
+        </div>
       </form>
     </>
   );
