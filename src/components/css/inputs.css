@@ -1,0 +1,44 @@
+.inputs {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 1rem;
+}
+
+.inputs input {
+  border: none;
+  outline: none;
+  height: 3rem;
+  padding-left: 2rem;
+}
+.inputs textarea {
+  outline: none;
+  border: none;
+  height: 48px;
+  padding-left: 1rem;
+}
+.disNone {
+  display: none;
+}
+.title {
+  border-radius: 1rem 1rem 0 0;
+  border-bottom: 1px solid red;
+}
+.titleDisplay {
+  border-radius: 1rem;
+}
+.take-note {
+  border-radius: 0 0 1rem 1rem;
+}
+.submit-btn {
+  position: absolute;
+  right: 27%;
+  top: 20%;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 3rem;
+  border: none;
+  background-color: #2196f3;
+  color: white;
+  font-size: 2rem;
+}
