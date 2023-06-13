@@ -17,6 +17,11 @@
   height: 3rem;
   padding-left: 2rem;
 }
+@media screen and (max-width: 400px) {
+  .inputs {
+    margin-bottom: 1rem;
+  }
+}
 .inputs textarea {
   resize: none;
   outline: none;
@@ -38,16 +43,20 @@
 }
 .take-note {
   border-radius: 0 0 1rem 1rem;
+  transition: 3;
 }
 textarea {
   /* resize: none; */
 }
+
+/* button css here */
 
 .submit-btn-div {
   display: flex;
   justify-content: flex-end;
   margin: -26px 13px 0px 0px;
 }
+
 .submit-btn {
   width: 3rem;
   height: 3rem;
@@ -56,6 +65,7 @@ textarea {
   background-color: #2196f3;
   color: white;
   font-size: 2rem;
+  transition: 0.3s;
 }
 .submit-btn:hover {
   background-color: white;

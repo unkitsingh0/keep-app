@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 let inputDataSlice = createSlice({
   name: "inputData",
-  initialState: [],
+  initialState: [{ title: "ankit", take_note: "singh" }],
   reducers: {
     addTodo: (state, action) => {
       return [...state, action.payload];

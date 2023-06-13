@@ -8,7 +8,7 @@ function Inputs() {
   let [title, setTitle] = useState("");
   let [take_note, setTake_note] = useState("");
   let data = useSelector((state) => state);
-  // console.log(data.input);
+  // console.log(data.childNote.active);
   let dispatch = useDispatch();
   let inputDisplay = data.input ? "" : "disNone";
   let titleStyle = data.input ? "" : "titleDisplay";
@@ -24,7 +24,7 @@ function Inputs() {
     if (title) {
       dispatch(addTodo({ title, take_note }));
     }
-
+    dispatch(openOrCloseINput(false));
     setTitle("");
     setTake_note("");
   };
@@ -32,7 +32,7 @@ function Inputs() {
   return (
     <>
       <form
-        className="inputs"
+        className={`inputs ${data.childNote.active ? "displayNone" : ""} `}
         onClick={(e) => {
           handelFormClick(e);
         }}

@@ -6,6 +6,7 @@
 .input-div {
   display: flex;
   justify-content: center;
+  padding-top: 3.5rem;
 }
 
 .main-notes {
@@ -13,12 +14,10 @@
   flex-wrap: wrap;
   background-color: #e3f2fd;
 }
-.blur {
-  filter: blur(1px);
-}
+
 .child-main-notes {
   width: 23vw;
-  height: 20vh;
+  height: 25vh;
   /* border: 1px solid red; */
   margin: 2rem 1rem 0 1rem;
   background-color: white;
@@ -26,19 +25,54 @@
   overflow-y: hidden;
   overflow-x: auto;
   flex-grow: 0.3;
+  cursor: pointer;
+  transition-duration: 0.43s;
+}
+.child-main-notes:hover {
+  width: 27vw;
+  height: 26vh;
 }
 @media screen and (max-width: 400px) {
   .child-main-notes {
     flex-grow: 1;
-    width: 40vw;
+    width: 42vw;
+  }
+  .child-main-notes:hover {
+    width: 45vw;
+    height: 28vh;
   }
 }
 .childStyle {
-  height: 70vh;
-  width: 70vh;
+  height: 81vh;
+  width: 69%;
   margin: auto;
   z-index: 1;
   filter: none;
+  position: fixed;
+  top: 25%;
+  bottom: 25%;
+  left: 15%;
+  /* right: 25%; */
+  border-top-left-radius: 1rem;
+}
+
+.childStyle:hover {
+  height: 81vh;
+  width: 69%;
+}
+@media screen and (max-width: 400px) {
+  .childStyle {
+    width: 75%;
+    height: 70vh;
+  }
+  .childStyle:hover {
+    height: 70vh;
+    width: 75%;
+  }
+}
+
+.displayNone {
+  display: none;
 }
 .child-main-notes h2 {
   display: flex;
