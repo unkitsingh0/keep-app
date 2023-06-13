@@ -1,8 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+let getLocalKeepData = () => {
+  let keepNotes = localStorage.getItem("keep");
+  return JSON.parse(keepNotes);
+};
+// console.log(getLocalKeepData());
 let inputDataSlice = createSlice({
   name: "inputData",
-  initialState: [{ title: "ankit", take_note: "singh" }],
+  initialState: getLocalKeepData(),
   reducers: {
     addTodo: (state, action) => {
       return [...state, action.payload];

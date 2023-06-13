@@ -15,13 +15,14 @@ function Main() {
   let backGroundBlure = childState.active
     ? { backgroundColor: "#2196f3" }
     : { backgroundColor: "#e3f2fd" };
-  let childStyle_p = childState.active ? { fontSize: "1.6rem" } : {};
+  let childStyle_p = childState.active ? { fontSize: "1.3rem" } : {};
   let NotesArry = useSelector((state) => state);
   let dispatch = useDispatch();
-  let activeStatus = NotesArry.inputData;
+
   useEffect(() => {
     dispatch(childNoteOpenOrClose(false));
-  }, [activeStatus, dispatch]);
+    localStorage.setItem("keep", JSON.stringify(NotesArry.inputData));
+  }, [NotesArry.inputData, dispatch]);
   return (
     <div
       style={backGroundBlure}
