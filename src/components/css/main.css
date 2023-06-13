@@ -27,12 +27,26 @@
   flex-grow: 0.3;
   cursor: pointer;
   transition-duration: 0.43s;
+  overflow-y: auto;
+}
+.last_note_margin_bottom {
+  margin-bottom: 2rem;
 }
 .child-main-notes:hover {
   width: 27vw;
   height: 26vh;
 }
 @media screen and (max-width: 400px) {
+  .child-main-notes {
+    flex-grow: 1;
+    width: 42vw;
+  }
+  .child-main-notes:hover {
+    width: 45vw;
+    height: 28vh;
+  }
+}
+@media screen and (max-width: 1000px) {
   .child-main-notes {
     flex-grow: 1;
     width: 42vw;

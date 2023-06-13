@@ -1,5 +1,5 @@
 import "./App.css";
-import Footer from "./components/Footer";
+
 import Main from "./components/Main";
 import Navbar from "./components/Navbar";
 import { useDispatch } from "react-redux";
@@ -19,7 +19,6 @@ function App() {
       <main>
         <Main />
       </main>
-      {/* <Footer /> */}
     </div>
   );
 }

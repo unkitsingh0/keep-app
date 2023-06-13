@@ -47,6 +47,10 @@ function Main() {
                   : childState.active
                   ? "displayNone"
                   : ""
+              } ${
+                NotesArry.inputData.length - 1 === index
+                  ? "last_note_margin_bottom"
+                  : ""
               }`}
               onClick={(e) => {
                 // setChildState(true);
