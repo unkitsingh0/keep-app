@@ -6,7 +6,8 @@ let getLocalKeepData = () => {
 // console.log(getLocalKeepData());
 let inputDataSlice = createSlice({
   name: "inputData",
-  initialState: getLocalKeepData(),
+  // initialState: [],
+  initialState: getLocalKeepData() ? getLocalKeepData() : [],
   reducers: {
     addTodo: (state, action) => {
       return [...state, action.payload];

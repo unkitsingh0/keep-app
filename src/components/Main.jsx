@@ -10,7 +10,7 @@ import "./css/main.css";
 
 function Main() {
   let childState = useSelector((state) => state.childNote);
-  console.log(childState);
+  // console.log(childState);
   let childStyle = childState.active ? "childStyle" : "";
   let backGroundBlure = childState.active
     ? { backgroundColor: "#2196f3" }
@@ -22,6 +22,7 @@ function Main() {
   useEffect(() => {
     dispatch(childNoteOpenOrClose(false));
     localStorage.setItem("keep", JSON.stringify(NotesArry.inputData));
+    // localStorage.setItem("keep", "singh ankti");
   }, [NotesArry.inputData, dispatch]);
   return (
     <div
