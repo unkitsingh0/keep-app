@@ -97,7 +97,61 @@
   text-align: center;
   padding-left: 0.2rem;
 }
+.edit_input_div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
 
+.edit_title_input {
+  height: 5vh;
+  padding-left: 9px;
+  padding-right: 9px;
+  margin-left: 9px;
+  margin-right: 9px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-bottom: 1rem;
+  border-color: #2196f3;
+}
+.edit_takeNote_input {
+  resize: none;
+  height: 60vh;
+  /* border: 2px; */
+  padding-left: 9px;
+  padding-right: 9px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  margin-left: 9px;
+  margin-right: 9px;
+  /* margin-bottom: 0.2rem; */
+  outline: none;
+  border-color: #2196f3;
+  /* border-color: red; */
+}
+@media screen and (max-width: 400px) {
+  .edit_takeNote_input {
+    height: 52vh;
+  }
+}
+.updateBtn {
+  background-color: #2196f3;
+  color: white;
+  font-size: 1.4rem;
+  border: none;
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  height: 2.5rem;
+}
+@media screen and (max-width: 400px) {
+  .updateBtn {
+    margin-bottom: 0.2rem;
+  }
+}
 .delete-btn {
   color: white;
 }
@@ -105,6 +159,12 @@
   /* border-radius: 1rem; */
   /* background-color: white; */
   color: red;
+}
+.edit-btn {
+  color: white;
+}
+.edit-btn:hover {
+  color: #40fca5;
 }
 .child-main-notes p {
   padding-left: 0.375rem;

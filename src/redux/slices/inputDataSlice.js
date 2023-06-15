@@ -18,9 +18,13 @@ let inputDataSlice = createSlice({
       });
       return deletTodo;
     },
+    updateTodo: (state, action) => {
+      state[action.payload.indexNo].title = action.payload.data.title;
+      state[action.payload.indexNo].take_note = action.payload.data.take_note;
+    },
   },
 });
 
-export let { addTodo, deleteTodo } = inputDataSlice.actions;
+export let { addTodo, deleteTodo, updateTodo } = inputDataSlice.actions;
 
 export default inputDataSlice.reducer;

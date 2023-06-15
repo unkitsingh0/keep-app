@@ -8,7 +8,7 @@ function Inputs() {
   let [title, setTitle] = useState("");
   let [take_note, setTake_note] = useState("");
   let data = useSelector((state) => state);
-  // console.log(data.childNote.active);
+
   let dispatch = useDispatch();
   let inputDisplay = data.input ? "" : "disNone";
   let titleStyle = data.input ? "" : "titleDisplay";
