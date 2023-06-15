@@ -112,6 +112,7 @@
   border-top: none;
   border-left: none;
   border-right: none;
+  outline: none;
   margin-bottom: 1rem;
   border-color: #2196f3;
 }
