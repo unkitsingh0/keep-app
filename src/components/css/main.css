@@ -68,6 +68,7 @@
   left: 13%;
   /* right: 25%; */
   border-top-left-radius: 1rem;
+  /* transition: all 0.31s ease-in; */
 }
 
 .childStyle:hover {

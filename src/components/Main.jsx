@@ -73,6 +73,7 @@ function Main() {
                 <>
                   <div className="edit_input_div">
                     <input
+                      style={{ borderColor: "#2196f3" }}
                       type="text"
                       value={updateTitle}
                       className="edit_title_input"
@@ -82,6 +83,7 @@ function Main() {
                     />
 
                     <textarea
+                      style={{ borderColor: "#2196f3" }}
                       value={updateTake_note}
                       className="edit_takeNote_input"
                       cols="30"
